@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RDX Technologies</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts: Silkscreen -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo silkscreen-bold">RDX Technologies</div>
+
+      <!-- Burger Icon -->
+      <div class="burger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <!-- Hidden Nav Links -->
+      <div class="nav-links" id="navLinks">
+        <!-- Internal page links -->
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+
+        <!-- External HTML pages inside folder -->
+        <a href="folder/store.html">Store</a>
+        <a href="folder/contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-left silkscreen-bold">
+      <h1>Reactive Digital Technologies</h1>
+      <button>Get Started</button>
+    </div>
+    <div class="hero-right silkscreen-regular">
+      <p>
+        Resurrecting forgotten tech and turning buyer’s remorse into someone else’s dream phone. I breathe new
+        life into devices, tweak them beyond their limits, and flip them into custom marvels—because one man’s
+        cracked screen is another man’s treasure (with a slightly higher price tag).
+      </p>
+    </div>
+  </section>
+
+  <!-- Tech Image Divider -->
+  <section class="tech-divider">
+    <img src="https://www.rts.com/wp-content/uploads/2019/11/E-waste.jpg" alt="Tech Waste">
+  </section>
+
+  <!-- About Section -->
+  <section class="about silkscreen-regular" id="about">
+    <h2 class="silkscreen-bold">About Us</h2>
+    <p>
+      We are a business that buys and sells electronic parts as-is. The business began when our CEO, T0K1M1 (not revealing their real name) originally bought and sold phones for a living. They realized that we throw away old electronics that contain precious materials, which could be repurposed for better use. Our mission is to rescue discarded tech, breathe new life into devices, and turn what was once waste into valuable products.
+    </p>
+  </section>
+
+  <!-- Store Section (Products on Homepage) -->
+  <section class="store silkscreen-regular" id="store">
+    <h2 class="silkscreen-bold">Our Products</h2>
+    <div class="products-container">
+      <!-- Product 1: Samsung S22 -->
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/71Wkk4n9olL._UF894,1000_QL80_.jpg" alt="Samsung S22">
+        <h3 class="silkscreen-bold">Samsung Galaxy S22</h3>
+        <p class="price">$250</p>
+        <p class="description">Good condition</p>
+        <button>Buy NOW</button>
+      </div>
+
+      <!-- Product 2: iPhone 15 Pro Max -->
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/61v5Jay9F5L._UF894,1000_QL80_.jpg" alt="iPhone 15 Pro Max">
+        <h3 class="silkscreen-bold">iPhone 15 Pro Max</h3>
+        <p class="price">$700</p>
+        <p class="description">Brand new</p>
+        <button>Buy THIS NOW</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer silkscreen-regular" id="contact">
+    @ 2025 RDX Technologies
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

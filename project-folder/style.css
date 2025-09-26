@@ -1,0 +1,198 @@
+/* ===== Fonts ===== */
+.silkscreen-regular { font-family: "Silkscreen", sans-serif; font-weight: 400; }
+.silkscreen-bold { font-family: "Silkscreen", sans-serif; font-weight: 700; }
+
+/* ===== General ===== */
+body {
+  margin: 0;
+  font-family: "Silkscreen", sans-serif;
+  scroll-behavior: smooth;
+  background: #fff;
+  color: #000;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Logo */
+.logo { font-size: 1.5rem; color: black; }
+
+/* Burger Icon */
+.burger {
+  width: 50px;
+  height: 50px;
+  background: black;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2000;
+  position: relative;
+  margin-right: 90px; /* Adjust as needed */
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 3px 0;
+}
+
+/* Nav Links Dropdown */
+.nav-links {
+  display: none;
+  position: absolute;
+  top: 80px;
+  right: -50px; /* Adjust dropdown position relative to burger */
+  flex-direction: column;
+  background: black;
+  padding: 10px 20px;
+  border-radius: 8px;
+  z-index: 1500;
+  min-width: 180px;
+  text-align: left;
+  transform: translateX(-100%);
+}
+
+.nav-links.active { display: flex; }
+
+.nav-links a {
+  padding: 10px 0;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links a:hover { color: #ccc; }
+
+/* ===== Hero ===== */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 160px 40px 100px 40px;
+  background: #f5f5f5;
+}
+
+.hero-left h1 { font-size: 3rem; }
+
+.hero-left button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hero-left button:hover { background: #222; }
+
+.hero-right p { max-width: 500px; color: #333; font-size: 1.1rem; }
+
+/* ===== Tech Image ===== */
+.tech-divider img { width: 100%; height: auto; display: block; }
+
+/* ===== About ===== */
+.about {
+  text-align: center;
+  padding: 100px 40px;
+  background: #eaeaea;
+  color: #000;
+}
+
+.about h2 { font-size: 2rem; margin-bottom: 20px; }
+.about p { max-width: 700px; margin: 10px auto; color: #333; line-height: 1.6; }
+
+/* ===== Store ===== */
+.store {
+  padding: 100px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.store h2 { font-size: 2rem; margin-bottom: 40px; }
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.card {
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover { transform: translateY(-5px) scale(1.05); }
+
+.card img { width: 100%; height: auto; border-radius: 8px; }
+
+.card h3 { margin: 10px 0 5px 0; }
+
+.card .price { color: #555; margin-bottom: 10px; }
+
+.card button {
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.card button:hover { background: #222; }
+
+/* ===== Footer ===== */
+.footer {
+  background: #d9d9d9;
+  padding: 30px 0;
+  text-align: center;
+  color: #000;
+  margin-top: 50px;
+}
+
+/* ===== Scroll Margin for Sections ===== */
+section {
+  scroll-margin-top: 100px; /* ensures sections scroll below navbar */
+  padding-top: 60px;        /* optional extra space at the top */
+}
+
+.contact { padding-top: 120px; } /* extra top space for contact section */
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 1024px) {
+  .hero { flex-direction: column; text-align: center; }
+  .hero-right { margin-top: 30px; }
+  .products-container { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media screen and (max-width: 768px) {
+  .products-container { grid-template-columns: repeat(2, 1fr); }
+  .card img { width: 90%; }
+}
+
+@media screen and (max-width: 480px) {
+  .products-container { grid-template-columns: 1fr; }
+  .card img { width: 100%; }
+}
